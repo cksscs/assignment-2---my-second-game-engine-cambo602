@@ -11,8 +11,8 @@ public class Map {
 	private int mapLength;
 	private int mapWidth;
 	private String worldFile;
-
-	Scanner input = new Scanner(System.in);
+	
+	Player p1 = new Player(30, "knight", 2, 5, 4, 7, 4, 6);
 
 	private String[][][] rooms; // 3D array to store all rooms for the floor/world
 
@@ -49,6 +49,8 @@ public class Map {
 		} catch (IOException e) { // catches checked exceptions
 			e.printStackTrace();
 		}
+		
+		p1.genPlayer();
 	}
 
 	public void printMap() {
@@ -111,9 +113,13 @@ public class Map {
 		System.out.println("--------------------------------------");
 	}
 
-	public String actionMneu(boolean[] details, int x, int y) {
+	public String actionMneu(boolean[] details, int x, int y, Player p) {
 
+		boolean gameOver = false;
+		
 		String userInput;
+		
+		Scanner input = new Scanner(System.in);
 
 		if (details[0]) {
 			System.out.println("Type E to attack enemy");
@@ -142,7 +148,15 @@ public class Map {
 			userInput = input.nextLine();
 
 			if (userInput.toLowerCase().equals("e") && details[0] == true) {
-
+				
+				Enemies e = new Enemies(10, "alien");
+				
+				e.genEnemies();
+				
+				e.combat(p1);
+				
+				gameOver = true;
+				
 				continue;
 
 			} else if (userInput.toLowerCase().equals("c") && details[1] == true) {
@@ -173,6 +187,11 @@ public class Map {
 				continue;
 			}
 		}
+		
+		if(gameOver) {
+			return "Game Over";
+		}
+		
 		return userInput;
 	}
 
@@ -193,8 +212,12 @@ public class Map {
 
 			printRoom(playerQuadX, playerQuadY);
 
-			moveDir = actionMneu(roomDetails, playerQuadX, playerQuadY);
-
+			moveDir = actionMneu(roomDetails, playerQuadX, playerQuadY, p1);
+			
+			if (moveDir.equals("Game Over")){
+				System.out.println("Game Over");
+				break;
+			}
 			if (moveDir.toLowerCase().equals("w")) {
 
 				playerQuadY -= 1;
