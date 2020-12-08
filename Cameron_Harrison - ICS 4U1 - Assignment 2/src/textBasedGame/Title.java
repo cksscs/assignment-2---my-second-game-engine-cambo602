@@ -43,6 +43,8 @@ public class Title {
 				System.out.println("Invalid input please try again");
 			}
 		}
+		
+		tInput.close();
 	}
 
 }
