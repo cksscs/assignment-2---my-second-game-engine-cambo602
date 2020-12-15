@@ -1,5 +1,13 @@
 package textBasedGame;
 
+/******************
+ * Cameron Harrison 
+ * ICS 4U1 
+ * Assignment 2
+ * ChestItems Class, adds to player stats when a chest is opened 
+ * 03/12/20
+ *****************/
+
 public class ChestItems {
 
 	public static void openChest(Player p) {

@@ -1,5 +1,13 @@
 package textBasedGame;
 
+/******************
+ * Cameron Harrison 
+ * ICS 4U1 
+ * Assignment 2
+ * Enemies class, sotres enemy drawing, and controls combat 
+ * 03/12/20
+ *****************/
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;

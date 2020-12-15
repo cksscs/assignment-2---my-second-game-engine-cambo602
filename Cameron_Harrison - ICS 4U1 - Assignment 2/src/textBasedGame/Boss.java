@@ -1,5 +1,13 @@
 package textBasedGame;
 
+/******************
+ * Cameron Harrison 
+ * ICS 4U1 
+ * Assignment 2
+ * Boss, Subclass of Enemies  
+ * 03/12/20
+ *****************/
+
 // I was able to have all the functionality of the boss using the regular enemies class, but I wanted to show I knew how inheritance worked 
 
 public class Boss extends Enemies{

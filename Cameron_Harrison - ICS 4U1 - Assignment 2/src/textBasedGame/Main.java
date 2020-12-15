@@ -4,13 +4,13 @@ package textBasedGame;
  * Cameron Harrison 
  * ICS 4U1 
  * Assignment 2
- * Text Based Game 
+ * Driver Class, controls flow of program 
  * 03/12/20
  *****************/
 
 /*
  TODO; 
- 1. Comments (Enemies and Map)
+ 1. Comments 
  2. Clean up things that may lose me marks (Ie. vars that should be private)
  */
 

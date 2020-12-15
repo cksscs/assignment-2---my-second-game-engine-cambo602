@@ -1,5 +1,13 @@
 package textBasedGame;
 
+/******************
+ * Cameron Harrison 
+ * ICS 4U1 
+ * Assignment 2
+ * Player Class, controls stats of the player, and player drawing
+ * 03/12/20
+ *****************/
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;

@@ -1,5 +1,13 @@
 package textBasedGame;
 
+/******************
+ * Cameron Harrison 
+ * ICS 4U1 
+ * Assignment 2
+ *  Map class, controls map, movements, and state changes
+ * 03/12/20
+ *****************/
+
 // Import required classes
 import java.util.Scanner;
 import java.io.BufferedReader;
